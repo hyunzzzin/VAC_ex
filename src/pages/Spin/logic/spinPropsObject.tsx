@@ -9,12 +9,13 @@ interface SpinBoxVAProps {
     SpinBoxProps?:any,
     multipleProps?:any,
 }
-
+//g
 const SpinBox = () =>{
     const [ value, setValue ] = useState(0);
     const [ multi, setMulti ] = useState(0);
     const SpinBoxProps = {
         value,
+        disableIncrease : value > 5,
         onDecrease: () => {
             setValue(Math.max(value - 1,0))
             console.log('1 뺀다 ~~')
@@ -31,7 +32,7 @@ const SpinBox = () =>{
             setMulti(multi + 3)
             console.log(' 3 곱하기 ')
         },
-        onDevide: () => {
+        onDivide: () => {
             setMulti(Math.max(multi - 3,0))
             console.log(' 3 나누기 ')
         },
@@ -54,6 +55,6 @@ const SpinBox = () =>{
     // 이부분에서 JSX를 VAC로 교체
     return <SpinBoxView {...SpinBoxVAProps} />
 
-    // return <VAC name="CIC-DEVELOP" data={multipleProps} />
+    // return <VAC name="CIC-DEVELOP" data={SpinBoxProps} />
 }
 export default SpinBox

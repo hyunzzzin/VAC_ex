@@ -11,14 +11,17 @@ interface SpinBoxVAProps {
 
 const SpinBoxView:React.FC<any> = ({value, multi, SpinBoxProps, multipleProps} : SpinBoxVAProps): JSX.Element => (
     <>
-        <div style={{margin:'200px'}}>
+        <div style={{margin:'200px' ,marginLeft:'300px'}}>
+            <h2> PLUS && MINUS</h2>
             <button onClick={SpinBoxProps.onDecrease} style={{width:'40px',height:'40px', marginRight:'5px'}}> -</button>
             <span style={{fontSize:'30px'}}>{value}</span>
-            <button onClick={SpinBoxProps.onIncrease} style={{width:'40px',height:'40px', marginLeft:'5px'}}> +</button>
+            {/*<button onClick={SpinBoxProps.onIncrease} style={{width:'40px',height:'40px', marginLeft:'5px'}}> +</button>*/}
+            <button disabled={SpinBoxProps.disableIncrease} onClick={SpinBoxProps.onIncrease} style={{width:'40px',height:'40px', marginLeft:'5px'}}> +</button>
         </div>
 
         <div style={{margin:'300px'}}>
-            <button onClick={multipleProps.onDevide} style={{width:'40px',height:'40px', marginRight:'5px'}}> / </button>
+            <h2> MULTIPLE && DIVID</h2>
+            <button onClick={multipleProps.onDivide} style={{width:'40px',height:'40px', marginRight:'5px'}}> / </button>
             <span style={{fontSize:'30px'}}>{multi}</span>
             <button onClick={multipleProps.onMulti} style={{width:'40px',height:'40px', marginLeft:'5px'}}> * </button>
         </div>
