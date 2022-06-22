@@ -55,6 +55,6 @@ const SpinBox = () =>{
     // 이부분에서 JSX를 VAC로 교체
     return <SpinBoxView {...SpinBoxVAProps} />
 
-    // return <VAC name="CIC-DEVELOP" data={SpinBoxProps} />
+    // return <VAC name="CIC-DEVELOP" data={SpinBoxVAProps} />
 }
 export default SpinBox
