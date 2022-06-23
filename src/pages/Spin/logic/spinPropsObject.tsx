@@ -38,9 +38,18 @@ const SpinBox = () =>{
         },
     }
     const SpinBoxVAProps : SpinBoxVAProps = {
+        /**
+         * state
+         */
         value:value,
         multi:multi,
+        /**
+         * blockChain
+         */
         SpinBoxProps:SpinBoxProps,
+        /**
+         * backend
+         */
         multipleProps:multipleProps,
 
     }
